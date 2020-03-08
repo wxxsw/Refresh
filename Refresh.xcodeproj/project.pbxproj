@@ -21,12 +21,20 @@
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
+		1C5A05EC24146322008D3377 /* Modifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C5A05EB24146322008D3377 /* Modifier.swift */; };
+		1C5A05EE2414635E008D3377 /* Key.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C5A05ED2414635E008D3377 /* Key.swift */; };
+		1C5A05FD2414E734008D3377 /* UpdateKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C5A05FC2414E734008D3377 /* UpdateKey.swift */; };
 		1C9BA381240A4A95008D210E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C9BA380240A4A95008D210E /* AppDelegate.swift */; };
 		1C9BA383240A4A95008D210E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C9BA382240A4A95008D210E /* SceneDelegate.swift */; };
 		1C9BA385240A4A95008D210E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C9BA384240A4A95008D210E /* ContentView.swift */; };
 		1C9BA387240A4A98008D210E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1C9BA386240A4A98008D210E /* Assets.xcassets */; };
 		1C9BA38A240A4A98008D210E /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1C9BA389240A4A98008D210E /* Preview Assets.xcassets */; };
 		1C9BA38D240A4A98008D210E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1C9BA38B240A4A98008D210E /* LaunchScreen.storyboard */; };
+		1C9BA3BC24139A11008D210E /* Refresh.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "Refresh::Refresh::Product" /* Refresh.framework */; };
+		1C9BA3BD24139A11008D210E /* Refresh.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = "Refresh::Refresh::Product" /* Refresh.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		1C9BA3C224139E7B008D210E /* List+Refresh.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C9BA3C124139E7B008D210E /* List+Refresh.swift */; };
+		1C9BA3CA2413B7D0008D210E /* Footer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C9BA3C92413B7D0008D210E /* Footer.swift */; };
+		1C9BA3CC2413BAF0008D210E /* Header.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C9BA3CB2413BAF0008D210E /* Header.swift */; };
 		OBJ_24 /* Refresh.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_9 /* Refresh.swift */; };
 		OBJ_31 /* Package.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_6 /* Package.swift */; };
 		OBJ_42 /* RefreshTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_12 /* RefreshTests.swift */; };
@@ -49,9 +57,33 @@
 			remoteGlobalIDString = "Refresh::RefreshTests";
 			remoteInfo = RefreshTests;
 		};
+		1C9BA3BE24139A11008D210E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = OBJ_1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = "Refresh::Refresh";
+			remoteInfo = Refresh;
+		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		1C9BA3C024139A12008D210E /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				1C9BA3BD24139A11008D210E /* Refresh.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		1C5A05EB24146322008D3377 /* Modifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Modifier.swift; sourceTree = "<group>"; };
+		1C5A05ED2414635E008D3377 /* Key.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Key.swift; sourceTree = "<group>"; };
+		1C5A05FC2414E734008D3377 /* UpdateKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateKey.swift; sourceTree = "<group>"; };
 		1C9BA37E240A4A95008D210E /* Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Demo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1C9BA380240A4A95008D210E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1C9BA382240A4A95008D210E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -60,6 +92,9 @@
 		1C9BA389240A4A98008D210E /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		1C9BA38C240A4A98008D210E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1C9BA38E240A4A98008D210E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1C9BA3C124139E7B008D210E /* List+Refresh.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "List+Refresh.swift"; sourceTree = "<group>"; };
+		1C9BA3C92413B7D0008D210E /* Footer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Footer.swift; sourceTree = "<group>"; };
+		1C9BA3CB2413BAF0008D210E /* Header.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Header.swift; sourceTree = "<group>"; };
 		OBJ_12 /* RefreshTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RefreshTests.swift; sourceTree = "<group>"; };
 		OBJ_13 /* XCTestManifests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XCTestManifests.swift; sourceTree = "<group>"; };
 		OBJ_17 /* LICENSE */ = {isa = PBXFileReference; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
@@ -75,6 +110,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1C9BA3BC24139A11008D210E /* Refresh.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -118,6 +154,13 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
+		1C9BA3BB24139A11008D210E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		OBJ_10 /* Tests */ = {
 			isa = PBXGroup;
 			children = (
@@ -146,7 +189,7 @@
 			name = Products;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		OBJ_5 /*  */ = {
+		OBJ_5 = {
 			isa = PBXGroup;
 			children = (
 				OBJ_6 /* Package.swift */,
@@ -156,8 +199,8 @@
 				OBJ_14 /* Products */,
 				OBJ_17 /* LICENSE */,
 				OBJ_18 /* README.md */,
+				1C9BA3BB24139A11008D210E /* Frameworks */,
 			);
-			name = "";
 			sourceTree = "<group>";
 		};
 		OBJ_7 /* Sources */ = {
@@ -171,7 +214,13 @@
 		OBJ_8 /* Refresh */ = {
 			isa = PBXGroup;
 			children = (
+				1C9BA3C92413B7D0008D210E /* Footer.swift */,
+				1C9BA3CB2413BAF0008D210E /* Header.swift */,
+				1C5A05ED2414635E008D3377 /* Key.swift */,
+				1C9BA3C124139E7B008D210E /* List+Refresh.swift */,
+				1C5A05EB24146322008D3377 /* Modifier.swift */,
 				OBJ_9 /* Refresh.swift */,
+				1C5A05FC2414E734008D3377 /* UpdateKey.swift */,
 			);
 			name = Refresh;
 			path = Sources/Refresh;
@@ -187,10 +236,12 @@
 				1C9BA37A240A4A95008D210E /* Sources */,
 				1C9BA37B240A4A95008D210E /* Frameworks */,
 				1C9BA37C240A4A95008D210E /* Resources */,
+				1C9BA3C024139A12008D210E /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				1C9BA3BF24139A11008D210E /* PBXTargetDependency */,
 			);
 			name = Demo;
 			productName = Demo;
@@ -269,7 +320,7 @@
 				en,
 				Base,
 			);
-			mainGroup = OBJ_5 /*  */;
+			mainGroup = OBJ_5;
 			productRefGroup = OBJ_14 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -311,7 +362,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 0;
 			files = (
+				1C5A05FD2414E734008D3377 /* UpdateKey.swift in Sources */,
 				OBJ_24 /* Refresh.swift in Sources */,
+				1C9BA3CA2413B7D0008D210E /* Footer.swift in Sources */,
+				1C9BA3C224139E7B008D210E /* List+Refresh.swift in Sources */,
+				1C9BA3CC2413BAF0008D210E /* Header.swift in Sources */,
+				1C5A05EC24146322008D3377 /* Modifier.swift in Sources */,
+				1C5A05EE2414635E008D3377 /* Key.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -335,6 +392,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		1C9BA3BF24139A11008D210E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = "Refresh::Refresh" /* Refresh */;
+			targetProxy = 1C9BA3BE24139A11008D210E /* PBXContainerItemProxy */;
+		};
 		OBJ_36 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = "Refresh::RefreshTests" /* RefreshTests */;

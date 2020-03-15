@@ -31,8 +31,8 @@ extension Refresh {
 extension Refresh.Header: View {
     
     public var body: some View {
-        print("body \(update.progress ?? 0) \(update.refreshing) \(refreshing)")
-        if update.refreshing, update.refreshing != refreshing {
+        print("body \(update.progress) \(update.refreshing) \(refreshing)")
+        if update.refreshing, update.refreshing != refreshing, update.progress > 1 {
             DispatchQueue.main.async {
                 self.refreshing = true
                 self.action()
@@ -43,7 +43,7 @@ extension Refresh.Header: View {
             if update.enable {
                 VStack(alignment: .center, spacing: 0) {
                     Spacer()
-                    label(update.progress ?? 0)
+                    label(update.progress)
                 }
                 .frame(maxWidth: .infinity)
             } else {

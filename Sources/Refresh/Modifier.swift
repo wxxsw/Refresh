@@ -13,17 +13,17 @@ extension Refresh {
     struct Modifier {
         let isEnabled: Bool
         
-        @State private var headerUpdate: Update
+        @State private var headerUpdate: HeaderUpdate
         @State private var headerPadding: CGFloat = 0
         @State private var headerPreviousProgress: CGFloat = 0
         
-        @State private var footerUpdate: Update
+        @State private var footerUpdate: FooterUpdate
         @State private var footerPadding: CGFloat = 0
         
         init(enable: Bool) {
             isEnabled = enable
-            _headerUpdate = State(initialValue: Update(enable: enable))
-            _footerUpdate = State(initialValue: Update(enable: enable))
+            _headerUpdate = State(initialValue: .init(enable: enable))
+            _footerUpdate = State(initialValue: .init(enable: enable))
         }
         
         @Environment(\.defaultMinListRowHeight) var rowHeight

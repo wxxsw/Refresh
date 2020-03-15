@@ -10,35 +10,44 @@ import SwiftUI
 @available(iOS 13.0, *)
 extension EnvironmentValues {
     
-    var refreshHeaderUpdate: Refresh.Update {
-        get { self[Refresh.Update.HeaderKey.self] }
-        set { self[Refresh.Update.HeaderKey.self] = newValue }
+    var refreshHeaderUpdate: Refresh.HeaderUpdate {
+        get { self[Refresh.HeaderUpdate.Key.self] }
+        set { self[Refresh.HeaderUpdate.Key.self] = newValue }
     }
     
-    var refreshFooterUpdate: Refresh.Update {
-        get { self[Refresh.Update.FooterKey.self] }
-        set { self[Refresh.Update.FooterKey.self] = newValue }
+    var refreshFooterUpdate: Refresh.FooterUpdate {
+        get { self[Refresh.FooterUpdate.Key.self] }
+        set { self[Refresh.FooterUpdate.Key.self] = newValue }
     }
 }
 
 @available(iOS 13.0, *)
 extension Refresh {
 
-    struct Update {
+    struct HeaderUpdate {
         let enable: Bool
-        var progress: CGFloat?
+        var progress: CGFloat = 0
+        var refreshing: Bool = false
+    }
+    
+    struct FooterUpdate {
+        let enable: Bool
         var refreshing: Bool = false
     }
 }
 
 @available(iOS 13.0, *)
-extension Refresh.Update {
+extension Refresh.HeaderUpdate {
     
-    struct HeaderKey: EnvironmentKey {
-        static var defaultValue: Refresh.Update = .init(enable: false)
+    struct Key: EnvironmentKey {
+        static var defaultValue: Refresh.HeaderUpdate = .init(enable: false)
     }
+}
+
+@available(iOS 13.0, *)
+extension Refresh.FooterUpdate {
     
-    struct FooterKey: EnvironmentKey {
-        static var defaultValue: Refresh.Update = .init(enable: false)
+    struct Key: EnvironmentKey {
+        static var defaultValue: Refresh.FooterUpdate = .init(enable: false)
     }
 }

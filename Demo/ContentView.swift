@@ -11,6 +11,7 @@ import Refresh
 struct ContentView: View {
     @State private var count: Int = 30
     @State private var headerRefreshing: Bool = false
+    @GestureState private var updating: CGSize = .zero
     
     var body: some View {
         VStack(spacing: 0) {
@@ -21,7 +22,11 @@ struct ContentView: View {
                 RefreshHeader(refreshing: $headerRefreshing, action: {
                     self.reload()
                 }) { progress in
-                    Text("pulling \(progress)")
+                    if self.headerRefreshing {
+                        Text("加载中...")
+                    } else {
+                        Text("下拉刷新 \(progress)")
+                    }
                 }
 
                 ForEach(0 ..< self.count) { i in
@@ -40,7 +45,7 @@ struct ContentView: View {
     
     func reload() {
         print("reload")
-        DispatchQueue.main.asyncAfter(deadline: .now() + 5) {
+        DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
             self.count = 30
             self.headerRefreshing = false
             print("reload finish")
@@ -48,7 +53,7 @@ struct ContentView: View {
     }
     
     func loadMore() {
-        DispatchQueue.main.asyncAfter(deadline: .now() + 5) {
+        DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
             self.count += 30
         }
     }

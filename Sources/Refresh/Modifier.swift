@@ -13,12 +13,13 @@ extension Refresh {
     struct Modifier {
         let isEnabled: Bool
         
-        @State private var headerUpdate: HeaderUpdate
+        @State private var id: Int = 0
+        @State private var headerUpdate: HeaderUpdateKey.Value
         @State private var headerPadding: CGFloat = 0
         @State private var headerPreviousProgress: CGFloat = 0
         
-        @State private var footerUpdate: FooterUpdate
-        @State private var footerPadding: CGFloat = 0
+        @State private var footerUpdate: FooterUpdateKey.Value
+        @State private var footerPreviousRefreshAt: Date?
         
         init(enable: Bool) {
             isEnabled = enable
@@ -34,54 +35,73 @@ extension Refresh {
 extension Refresh.Modifier: ViewModifier {
     
     func body(content: Content) -> some View {
-        GeometryReader { proxy in
+        return GeometryReader { proxy in
             content
                 .environment(\.refreshHeaderUpdate, self.headerUpdate)
                 .environment(\.refreshFooterUpdate, self.footerUpdate)
-//                .animation(nil)
                 .padding(.top, self.headerPadding)
-                .padding(.bottom, self.footerPadding)
-//                .animation(.easeOut)
-                .clipped()
-                .backgroundPreferenceValue(Refresh.Key.self) { value -> Color in
-                    DispatchQueue.main.async {
-                        self.update(proxy: proxy, value: value)
-                    }
+                .clipped(proxy.safeAreaInsets == .zero)
+                .backgroundPreferenceValue(Refresh.HeaderAnchorKey.self) { v -> Color in
+                    DispatchQueue.main.async { self.update(proxy: proxy, value: v) }
                     return Color.clear
                 }
+                .backgroundPreferenceValue(Refresh.FooterAnchorKey.self) { v -> Color in
+                    DispatchQueue.main.async { self.update(proxy: proxy, value: v) }
+                    return Color.clear
+                }
+                .id(self.id)
         }
     }
     
-    func update(proxy: GeometryProxy, value: Refresh.Key.Value) {
-        for (k, v) in value {
-            let rect = proxy[v.bounds]
-            let padding = -max(rowHeight, rect.height)
+    func update(proxy: GeometryProxy, value: Refresh.HeaderAnchorKey.Value) {
+        guard let item = value.first else { return }
+        guard !footerUpdate.refresh else { return }
+        
+        let bounds = proxy[item.bounds]
+        var update = headerUpdate
+        
+        update.progress = max(0, (bounds.maxY) / bounds.height)
+        
+        if update.refresh != item.refreshing {
+            update.refresh = item.refreshing
             
-            switch k {
-            case .header:
-                let progress = rect.maxY / rect.height
-                var update = headerUpdate
-                
-                update.progress = progress
-                
-                if update.refreshing != v.refreshing {
-                    update.refreshing = v.refreshing
-                } else {
-                    update.refreshing = update.refreshing || (headerPreviousProgress > 1 && progress < headerPreviousProgress && progress >= 1)
+            if !item.refreshing {
+                id += 1
+                DispatchQueue.main.async {
+                    self.headerUpdate.progress = 0
                 }
-                
-                headerUpdate = update
-                headerPadding = update.refreshing ? 0 : padding
-                headerPreviousProgress = progress
-                
-            case .footer:
-                var update = footerUpdate
-                
-                update.refreshing = false
-                
-                footerUpdate = update
-                footerPadding = -max(rowHeight, rect.height)
             }
+        } else {
+            update.refresh = update.refresh || (headerPreviousProgress > 1 && update.progress < headerPreviousProgress && update.progress >= 1)
         }
+        
+        headerUpdate = update
+        headerPadding = headerUpdate.refresh ? 0 : -max(rowHeight, bounds.height)
+        headerPreviousProgress = update.progress
+    }
+    
+    func update(proxy: GeometryProxy, value: Refresh.FooterAnchorKey.Value) {
+        guard let item = value.first else { return }
+        guard headerUpdate.progress == 0 else { return }
+        
+        let bounds = proxy[item.bounds]
+        var update = footerUpdate
+        
+        if bounds.minY <= rowHeight || bounds.minY <= bounds.height {
+            update.refresh = false
+        } else if update.refresh && !item.refreshing {
+            update.refresh = false
+        } else {
+            update.refresh = proxy.size.height - bounds.minY + item.preloadOffset > 0
+        }
+        
+        if update.refresh, !footerUpdate.refresh {
+            if let date = footerPreviousRefreshAt, Date().timeIntervalSince(date) < 0.1 {
+                update.refresh = false
+            }
+            footerPreviousRefreshAt = Date()
+        }
+        
+        footerUpdate = update
     }
 }

@@ -31,8 +31,7 @@ extension Refresh {
 extension Refresh.Header: View {
     
     public var body: some View {
-        print("body \(update.progress) \(update.refreshing) \(refreshing)")
-        if update.refreshing, update.refreshing != refreshing, update.progress > 1 {
+        if update.refresh, !refreshing, update.progress > 1 {
             DispatchQueue.main.async {
                 self.refreshing = true
                 self.action()
@@ -44,6 +43,7 @@ extension Refresh.Header: View {
                 VStack(alignment: .center, spacing: 0) {
                     Spacer()
                     label(update.progress)
+                        .opacity(opacity)
                 }
                 .frame(maxWidth: .infinity)
             } else {
@@ -51,6 +51,12 @@ extension Refresh.Header: View {
             }
         }
         .listRowInsets(.init(top: 0, leading: 0, bottom: 0, trailing: 0))
-        .anchorPreference(key: Refresh.Key.self, value: .bounds) { [.header: .init(bounds: $0, refreshing: self.refreshing)] }
+        .anchorPreference(key: Refresh.HeaderAnchorKey.self, value: .bounds) {
+            [.init(bounds: $0, refreshing: self.refreshing)]
+        }
+    }
+    
+    var opacity: Double {
+        (!refreshing && update.refresh) || (update.progress == 0) ? 0 : 1
     }
 }

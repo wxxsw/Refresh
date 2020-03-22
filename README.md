@@ -8,7 +8,6 @@
 <a href="https://codebeat.co/projects/github-com-wxxsw-refresh-master"><img alt="codebeat badge" src="https://codebeat.co/badges/a130bdd3-eb27-4bf1-820f-8839bbbb3715" /></a>
 <a href="https://github.com/wxxsw/Refresh/blob/master/LICENSE"><img src="http://img.shields.io/badge/license-MIT-lightgrey.svg?style=flat"></a>
 </p>
-<br/>
 
 ## Quick Start
 

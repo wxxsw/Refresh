@@ -51,7 +51,7 @@ Open `Refresh.xcodeproj` and run `Demo` target.
 ### Swift Package Manager
 
 1. Select `Xcode -> File -> Swift Packages -> Add Package Dependency...` 
-2. Enter `https://github.com/wxxsw/VideoPlayer`.
+2. Enter `https://github.com/wxxsw/Refresh`.
 3. Click `Next`, then select the version, complete.
 
 ### Requirements

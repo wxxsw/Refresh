@@ -10,11 +10,26 @@
 </p>
 <br/>
 
+- [Features](#features)
+- [Usage](#usage)
+- [Installation](#installation)
+- [Requirements](#requirements)
+- [License](#license)
+
 ## Demo
 
 Open `Refresh.xcodeproj` and run `Demo` target.
 
 ![Screenshot](https://github.com/wxxsw/Refresh/blob/master/Images/screenshot.gif)
+
+## Features
+
+- [x] Support drop-down refresh and scroll up to load more.
+- [x] Fully based on SwiftUI, no UIViewRepresentable, no UIViewControllerRepresentable.
+- [x] Compatible with NavigationView, TabView.
+- [x] Fully customizable UI.
+- [x] Easy to animate.
+- [x] Simple API.
 
 ## Usage
 

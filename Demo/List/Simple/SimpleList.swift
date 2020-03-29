@@ -69,7 +69,7 @@ struct SimpleList: View {
     
     func reload() {
         DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
-            self.items = SimpleList.generateItems(count: 30)
+            self.items = SimpleList.generateItems(count: 20)
             self.headerRefreshing = false
             self.noMore = false
         }
@@ -77,7 +77,7 @@ struct SimpleList: View {
     
     func loadMore() {
         DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
-            self.items += SimpleList.generateItems(count: 20)
+            self.items += SimpleList.generateItems(count: 10)
             self.footerRefreshing = false
             self.noMore = self.items.count > 50
         }

@@ -20,7 +20,7 @@
 
 Open `Refresh.xcodeproj` and run `Demo` target.
 
-<image src="Images/screenshot.gif" width="50%" />
+<image src="Images/screenshot.gif" width="40%" />
 
 ## Features
 

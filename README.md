@@ -20,7 +20,7 @@
 
 Open `Refresh.xcodeproj` and run `Demo` target.
 
-![Screenshot](https://github.com/wxxsw/Refresh/blob/master/Images/screenshot.gif)
+<image src="Images/screenshot.gif" width="50%" />
 
 ## Features
 

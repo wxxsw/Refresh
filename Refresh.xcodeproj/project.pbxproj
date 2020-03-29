@@ -25,22 +25,23 @@
 		1C82EA2E2422515900B80DA4 /* HeaderKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C82EA2D2422515900B80DA4 /* HeaderKey.swift */; };
 		1C82EA302422518400B80DA4 /* FooterKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C82EA2F2422518400B80DA4 /* FooterKey.swift */; };
 		1C82EA3224233EDC00B80DA4 /* MenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C82EA3124233EDC00B80DA4 /* MenuView.swift */; };
-		1C82EA3E2423A2A500B80DA4 /* DemoList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C82EA3D2423A2A500B80DA4 /* DemoList.swift */; };
+		1C82EA3E2423A2A500B80DA4 /* SimpleList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C82EA3D2423A2A500B80DA4 /* SimpleList.swift */; };
 		1C82EA422423A80600B80DA4 /* SingleListInNavigtionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C82EA412423A80600B80DA4 /* SingleListInNavigtionView.swift */; };
 		1C82EA442423A86100B80DA4 /* MutipleListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C82EA432423A86100B80DA4 /* MutipleListView.swift */; };
 		1C82EA462423AA3500B80DA4 /* SingleListInNavigationAndTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C82EA452423AA3500B80DA4 /* SingleListInNavigationAndTabView.swift */; };
 		1C82EA482423AADF00B80DA4 /* SingleListWithoutNavigationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C82EA472423AADF00B80DA4 /* SingleListWithoutNavigationView.swift */; };
 		1C82EA4B2423BA6C00B80DA4 /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C82EA492423BA4C00B80DA4 /* Utilities.swift */; };
-		1C82EA4D24264C7200B80DA4 /* DemoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C82EA4C24264C7200B80DA4 /* DemoCell.swift */; };
-		1C82EA4F2426572600B80DA4 /* DemoPullToRefreshView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C82EA4E2426572600B80DA4 /* DemoPullToRefreshView.swift */; };
-		1C82EA512426575400B80DA4 /* DemoRefreshingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C82EA502426575400B80DA4 /* DemoRefreshingView.swift */; };
+		1C82EA4D24264C7200B80DA4 /* SimpleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C82EA4C24264C7200B80DA4 /* SimpleCell.swift */; };
+		1C82EA4F2426572600B80DA4 /* SimplePullToRefreshView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C82EA4E2426572600B80DA4 /* SimplePullToRefreshView.swift */; };
+		1C82EA512426575400B80DA4 /* SimpleRefreshingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C82EA502426575400B80DA4 /* SimpleRefreshingView.swift */; };
+		1C82EA5D2428BAB400B80DA4 /* ActivityIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C82EA5C2428BAB400B80DA4 /* ActivityIndicator.swift */; };
+		1C977775242C42560021FF29 /* Refresh.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "Refresh::Refresh::Product" /* Refresh.framework */; };
+		1C977776242C42560021FF29 /* Refresh.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = "Refresh::Refresh::Product" /* Refresh.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		1C9BA381240A4A95008D210E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C9BA380240A4A95008D210E /* AppDelegate.swift */; };
 		1C9BA383240A4A95008D210E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C9BA382240A4A95008D210E /* SceneDelegate.swift */; };
 		1C9BA387240A4A98008D210E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1C9BA386240A4A98008D210E /* Assets.xcassets */; };
 		1C9BA38A240A4A98008D210E /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1C9BA389240A4A98008D210E /* Preview Assets.xcassets */; };
 		1C9BA38D240A4A98008D210E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1C9BA38B240A4A98008D210E /* LaunchScreen.storyboard */; };
-		1C9BA3BC24139A11008D210E /* Refresh.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "Refresh::Refresh::Product" /* Refresh.framework */; };
-		1C9BA3BD24139A11008D210E /* Refresh.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = "Refresh::Refresh::Product" /* Refresh.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		1C9BA3C224139E7B008D210E /* List+Refresh.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C9BA3C124139E7B008D210E /* List+Refresh.swift */; };
 		1C9BA3CA2413B7D0008D210E /* Footer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C9BA3C92413B7D0008D210E /* Footer.swift */; };
 		1C9BA3CC2413BAF0008D210E /* Header.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C9BA3CB2413BAF0008D210E /* Header.swift */; };
@@ -52,6 +53,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		1C977777242C42560021FF29 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = OBJ_1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = "Refresh::Refresh";
+			remoteInfo = Refresh;
+		};
 		1C9BA378240A4A79008D210E /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = OBJ_1 /* Project object */;
@@ -66,23 +74,16 @@
 			remoteGlobalIDString = "Refresh::RefreshTests";
 			remoteInfo = RefreshTests;
 		};
-		1C9BA3BE24139A11008D210E /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = OBJ_1 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = "Refresh::Refresh";
-			remoteInfo = Refresh;
-		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		1C9BA3C024139A12008D210E /* Embed Frameworks */ = {
+		1C977779242C42560021FF29 /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				1C9BA3BD24139A11008D210E /* Refresh.framework in Embed Frameworks */,
+				1C977776242C42560021FF29 /* Refresh.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -94,15 +95,16 @@
 		1C82EA2D2422515900B80DA4 /* HeaderKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderKey.swift; sourceTree = "<group>"; };
 		1C82EA2F2422518400B80DA4 /* FooterKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FooterKey.swift; sourceTree = "<group>"; };
 		1C82EA3124233EDC00B80DA4 /* MenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuView.swift; sourceTree = "<group>"; };
-		1C82EA3D2423A2A500B80DA4 /* DemoList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoList.swift; sourceTree = "<group>"; };
+		1C82EA3D2423A2A500B80DA4 /* SimpleList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleList.swift; sourceTree = "<group>"; };
 		1C82EA412423A80600B80DA4 /* SingleListInNavigtionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleListInNavigtionView.swift; sourceTree = "<group>"; };
 		1C82EA432423A86100B80DA4 /* MutipleListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MutipleListView.swift; sourceTree = "<group>"; };
 		1C82EA452423AA3500B80DA4 /* SingleListInNavigationAndTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleListInNavigationAndTabView.swift; sourceTree = "<group>"; };
 		1C82EA472423AADF00B80DA4 /* SingleListWithoutNavigationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleListWithoutNavigationView.swift; sourceTree = "<group>"; };
 		1C82EA492423BA4C00B80DA4 /* Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
-		1C82EA4C24264C7200B80DA4 /* DemoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoCell.swift; sourceTree = "<group>"; };
-		1C82EA4E2426572600B80DA4 /* DemoPullToRefreshView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoPullToRefreshView.swift; sourceTree = "<group>"; };
-		1C82EA502426575400B80DA4 /* DemoRefreshingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoRefreshingView.swift; sourceTree = "<group>"; };
+		1C82EA4C24264C7200B80DA4 /* SimpleCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleCell.swift; sourceTree = "<group>"; };
+		1C82EA4E2426572600B80DA4 /* SimplePullToRefreshView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimplePullToRefreshView.swift; sourceTree = "<group>"; };
+		1C82EA502426575400B80DA4 /* SimpleRefreshingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleRefreshingView.swift; sourceTree = "<group>"; };
+		1C82EA5C2428BAB400B80DA4 /* ActivityIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityIndicator.swift; sourceTree = "<group>"; };
 		1C9BA37E240A4A95008D210E /* Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Demo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1C9BA380240A4A95008D210E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1C9BA382240A4A95008D210E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -128,7 +130,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1C9BA3BC24139A11008D210E /* Refresh.framework in Frameworks */,
+				1C977775242C42560021FF29 /* Refresh.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -170,28 +172,45 @@
 			name = AppDelegate;
 			sourceTree = "<group>";
 		};
-		1C82EA3C2423A29400B80DA4 /* List */ = {
+		1C82EA582428BA7E00B80DA4 /* List */ = {
 			isa = PBXGroup;
 			children = (
-				1C82EA4C24264C7200B80DA4 /* DemoCell.swift */,
-				1C82EA3D2423A2A500B80DA4 /* DemoList.swift */,
-				1C82EA4E2426572600B80DA4 /* DemoPullToRefreshView.swift */,
-				1C82EA502426575400B80DA4 /* DemoRefreshingView.swift */,
+				1C82EA592428BA8400B80DA4 /* Simple */,
 			);
-			name = List;
+			path = List;
+			sourceTree = "<group>";
+		};
+		1C82EA592428BA8400B80DA4 /* Simple */ = {
+			isa = PBXGroup;
+			children = (
+				1C82EA4C24264C7200B80DA4 /* SimpleCell.swift */,
+				1C82EA3D2423A2A500B80DA4 /* SimpleList.swift */,
+				1C82EA4E2426572600B80DA4 /* SimplePullToRefreshView.swift */,
+				1C82EA502426575400B80DA4 /* SimpleRefreshingView.swift */,
+			);
+			path = Simple;
+			sourceTree = "<group>";
+		};
+		1C82EA5B2428BAA100B80DA4 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				1C82EA5C2428BAB400B80DA4 /* ActivityIndicator.swift */,
+			);
+			path = Utilities;
 			sourceTree = "<group>";
 		};
 		1C9BA37F240A4A95008D210E /* Demo */ = {
 			isa = PBXGroup;
 			children = (
 				1C82EA3B2423A25E00B80DA4 /* AppDelegate */,
-				1C82EA3C2423A29400B80DA4 /* List */,
+				1C82EA582428BA7E00B80DA4 /* List */,
 				1C82EA3124233EDC00B80DA4 /* MenuView.swift */,
 				1C82EA432423A86100B80DA4 /* MutipleListView.swift */,
 				1C82EA452423AA3500B80DA4 /* SingleListInNavigationAndTabView.swift */,
 				1C82EA412423A80600B80DA4 /* SingleListInNavigtionView.swift */,
 				1C82EA472423AADF00B80DA4 /* SingleListWithoutNavigationView.swift */,
 				1C82EA362423A20700B80DA4 /* Supporting Files */,
+				1C82EA5B2428BAA100B80DA4 /* Utilities */,
 			);
 			path = Demo;
 			sourceTree = "<group>";
@@ -287,12 +306,12 @@
 				1C9BA37A240A4A95008D210E /* Sources */,
 				1C9BA37B240A4A95008D210E /* Frameworks */,
 				1C9BA37C240A4A95008D210E /* Resources */,
-				1C9BA3C024139A12008D210E /* Embed Frameworks */,
+				1C977779242C42560021FF29 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				1C9BA3BF24139A11008D210E /* PBXTargetDependency */,
+				1C977778242C42560021FF29 /* PBXTargetDependency */,
 			);
 			name = Demo;
 			productName = Demo;
@@ -405,12 +424,13 @@
 			files = (
 				1C9BA381240A4A95008D210E /* AppDelegate.swift in Sources */,
 				1C82EA462423AA3500B80DA4 /* SingleListInNavigationAndTabView.swift in Sources */,
-				1C82EA4D24264C7200B80DA4 /* DemoCell.swift in Sources */,
-				1C82EA512426575400B80DA4 /* DemoRefreshingView.swift in Sources */,
+				1C82EA4D24264C7200B80DA4 /* SimpleCell.swift in Sources */,
+				1C82EA512426575400B80DA4 /* SimpleRefreshingView.swift in Sources */,
+				1C82EA5D2428BAB400B80DA4 /* ActivityIndicator.swift in Sources */,
 				1C82EA3224233EDC00B80DA4 /* MenuView.swift in Sources */,
 				1C9BA383240A4A95008D210E /* SceneDelegate.swift in Sources */,
-				1C82EA4F2426572600B80DA4 /* DemoPullToRefreshView.swift in Sources */,
-				1C82EA3E2423A2A500B80DA4 /* DemoList.swift in Sources */,
+				1C82EA4F2426572600B80DA4 /* SimplePullToRefreshView.swift in Sources */,
+				1C82EA3E2423A2A500B80DA4 /* SimpleList.swift in Sources */,
 				1C82EA482423AADF00B80DA4 /* SingleListWithoutNavigationView.swift in Sources */,
 				1C82EA422423A80600B80DA4 /* SingleListInNavigtionView.swift in Sources */,
 				1C82EA442423A86100B80DA4 /* MutipleListView.swift in Sources */,
@@ -452,10 +472,10 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		1C9BA3BF24139A11008D210E /* PBXTargetDependency */ = {
+		1C977778242C42560021FF29 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = "Refresh::Refresh" /* Refresh */;
-			targetProxy = 1C9BA3BE24139A11008D210E /* PBXContainerItemProxy */;
+			targetProxy = 1C977777242C42560021FF29 /* PBXContainerItemProxy */;
 		};
 		OBJ_36 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -484,7 +504,7 @@
 		1C9BA38F240A4A98008D210E /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
@@ -533,6 +553,7 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				INFOPLIST_FILE = Demo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
@@ -548,7 +569,7 @@
 		1C9BA390240A4A98008D210E /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
@@ -593,6 +614,7 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				INFOPLIST_FILE = Demo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
@@ -615,6 +637,7 @@
 				);
 				HEADER_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = Refresh.xcodeproj/Refresh_Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) $(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
 				OTHER_CFLAGS = "$(inherited)";
 				OTHER_LDFLAGS = "$(inherited)";
@@ -639,6 +662,7 @@
 				);
 				HEADER_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = Refresh.xcodeproj/Refresh_Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) $(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
 				OTHER_CFLAGS = "$(inherited)";
 				OTHER_LDFLAGS = "$(inherited)";
@@ -656,6 +680,7 @@
 		OBJ_28 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD = /usr/bin/true;
 				OTHER_SWIFT_FLAGS = "-swift-version 5 -I $(TOOLCHAIN_DIR)/usr/lib/swift/pm/4_2 -target x86_64-apple-macosx10.10 -sdk /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk -package-description-version 5.1";
 				SWIFT_VERSION = 5.0;
@@ -665,6 +690,7 @@
 		OBJ_29 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD = /usr/bin/true;
 				OTHER_SWIFT_FLAGS = "-swift-version 5 -I $(TOOLCHAIN_DIR)/usr/lib/swift/pm/4_2 -target x86_64-apple-macosx10.10 -sdk /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk -package-description-version 5.1";
 				SWIFT_VERSION = 5.0;
@@ -701,12 +727,14 @@
 		OBJ_34 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 			};
 			name = Debug;
 		};
 		OBJ_35 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 			};
 			name = Release;
 		};
@@ -721,6 +749,7 @@
 				);
 				HEADER_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = Refresh.xcodeproj/RefreshTests_Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @loader_path/../Frameworks @loader_path/Frameworks";
 				OTHER_CFLAGS = "$(inherited)";
 				OTHER_LDFLAGS = "$(inherited)";
@@ -766,6 +795,7 @@
 				);
 				HEADER_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = Refresh.xcodeproj/RefreshTests_Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @loader_path/../Frameworks @loader_path/Frameworks";
 				OTHER_CFLAGS = "$(inherited)";
 				OTHER_LDFLAGS = "$(inherited)";

@@ -10,7 +10,7 @@ import SwiftUI
 struct SingleListInNavigationAndTabView: View {
     var body: some View {
         TabView {
-            DemoList()
+            SimpleList()
                 .tabItem {
                     Image(systemName: "list.bullet")
                     Text("Tab 1")

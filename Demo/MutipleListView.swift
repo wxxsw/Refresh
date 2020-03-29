@@ -13,15 +13,15 @@ struct MutipleListView: View {
             Color.yellow.frame(height: 44)
             
             HStack {
-                DemoList()
+                SimpleList()
                     .border(Color.gray, width: 2)
-                DemoList()
+                SimpleList()
                     .border(Color.gray, width: 2)
             }
             HStack {
-                DemoList()
+                SimpleList()
                     .border(Color.gray, width: 2)
-                DemoList()
+                SimpleList()
                     .border(Color.gray, width: 2)
             }
             

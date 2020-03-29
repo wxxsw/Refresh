@@ -10,7 +10,7 @@ import SwiftUI
 struct SingleListWithoutNavigationView: View {
     var body: some View {
         ZStack(alignment: .topLeading) {
-            DemoList()
+            SimpleList()
             
             Button(action: {
                 self.presentationMode.wrappedValue.dismiss()

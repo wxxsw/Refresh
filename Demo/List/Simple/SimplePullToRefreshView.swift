@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct DemoPullToRefreshView: View {
+struct SimplePullToRefreshView: View {
     let progress: CGFloat
     
     var body: some View {
@@ -15,8 +15,8 @@ struct DemoPullToRefreshView: View {
     }
 }
 
-struct DemoPullToRefreshView_Previews: PreviewProvider {
+struct SimplePullToRefreshView_Previews: PreviewProvider {
     static var previews: some View {
-        DemoPullToRefreshView(progress: 0)
+        SimplePullToRefreshView(progress: 0)
     }
 }

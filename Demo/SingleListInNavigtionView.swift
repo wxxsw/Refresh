@@ -9,7 +9,7 @@ import SwiftUI
 
 struct SingleListInNavigtionView: View {
     var body: some View {
-        DemoList()
+        SimpleList()
             .edgesIgnoringSafeArea(.bottom)
             .navigationBarTitle("Single List in NavigationView", displayMode: .inline)
     }

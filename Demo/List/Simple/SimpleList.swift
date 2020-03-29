@@ -1,5 +1,5 @@
 //
-//  DemoList.swift
+//  SimpleList.swift
 //  Demo
 //
 //  Created by Gesen on 2020/3/22.
@@ -8,7 +8,7 @@
 import SwiftUI
 import Refresh
 
-struct DemoList: View {
+struct SimpleList: View {
     
     struct Item: Identifiable {
         let id = UUID()
@@ -28,15 +28,15 @@ struct DemoList: View {
                     self.reload()
                 }) { progress in
                     if self.headerRefreshing {
-                        DemoRefreshingView()
+                        SimpleRefreshingView()
                     } else {
-                        DemoPullToRefreshView(progress: progress)
+                        SimplePullToRefreshView(progress: progress)
                     }
                 }
             }
             
             ForEach(items) { item in
-                DemoCell(item: item)
+                SimpleCell(item: item)
             }
              
             if items.count > 0 {
@@ -48,7 +48,7 @@ struct DemoList: View {
                             .foregroundColor(.secondary)
                             .padding()
                     } else {
-                        DemoRefreshingView()
+                        SimpleRefreshingView()
                             .padding()
                     }
                 }
@@ -59,7 +59,7 @@ struct DemoList: View {
         .enableRefresh()
         .overlay(Group {
             if items.count == 0 {
-                ActivityIndicatorView(style: .medium)
+                ActivityIndicator(style: .medium)
             } else {
                 EmptyView()
             }
@@ -69,7 +69,7 @@ struct DemoList: View {
     
     func reload() {
         DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
-            self.items = DemoList.generateItems(count: 30)
+            self.items = SimpleList.generateItems(count: 30)
             self.headerRefreshing = false
             self.noMore = false
         }
@@ -77,14 +77,14 @@ struct DemoList: View {
     
     func loadMore() {
         DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
-            self.items += DemoList.generateItems(count: 20)
+            self.items += SimpleList.generateItems(count: 20)
             self.footerRefreshing = false
             self.noMore = self.items.count > 50
         }
     }
 }
 
-extension DemoList {
+extension SimpleList {
     
     static func generateItems(count: Int) -> [Item] {
         (0 ..< count).map { _ in

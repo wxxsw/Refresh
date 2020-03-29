@@ -6,10 +6,16 @@ import PackageDescription
 let package = Package(
     name: "Refresh",
     products: [
-        .library(name: "Refresh", type: .dynamic, targets: ["Refresh"]),
+        .library(
+            name: "Refresh",
+            targets: ["Refresh"]),
     ],
     targets: [
-        .target(name: "Refresh", dependencies: []),
-        .testTarget(name: "RefreshTests", dependencies: ["Refresh"]),
+        .target(
+            name: "Refresh",
+            dependencies: []),
+        .testTarget(
+            name: "RefreshTests",
+            dependencies: ["Refresh"]),
     ]
 )

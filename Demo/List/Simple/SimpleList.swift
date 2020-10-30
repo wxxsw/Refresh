@@ -22,7 +22,7 @@ struct SimpleList: View {
     @State private var noMore: Bool = false
     
     var body: some View {
-        List {
+        ScrollView {
             if items.count > 0 {
                 RefreshHeader(refreshing: $headerRefreshing, action: {
                     self.reload()

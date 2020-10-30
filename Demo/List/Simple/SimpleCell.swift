@@ -32,7 +32,7 @@ struct SimpleCell: View {
 
 struct SimpleCell_Previews: PreviewProvider {
     static var previews: some View {
-        List {
+        ScrollView {
             ForEach(SimpleList.generateItems(count: 4)) { item in
                 SimpleCell(item: item)
             }

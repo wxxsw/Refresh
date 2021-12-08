@@ -35,9 +35,7 @@ Open `Refresh.xcodeproj` and run `Demo` target.
 
 ```swift
 ScrollView {
-    RefreshHeader(refreshing: $headerRefreshing, action: {
-        self.reload()
-    }) { progress in
+    RefreshHeader(refreshing: $headerRefreshing, action: reload) { progress in
         if self.headerRefreshing {
             Text("refreshing...")
         } else {
@@ -49,9 +47,7 @@ ScrollView {
         YourCell(item: item)
     }
 
-    RefreshFooter(refreshing: $footerRefreshing, action: {
-        self.loadMore()
-    }) {
+    RefreshFooter(refreshing: $footerRefreshing, action: loadMore) {
         if self.noMore {
             Text("No more data !")
         } else {

@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-@available(iOS 13.0, *)
+@available(iOS 13.0, macOS 10.15, *)
 extension EnvironmentValues {
     
     var refreshHeaderUpdate: Refresh.HeaderUpdateKey.Value {
@@ -16,7 +16,7 @@ extension EnvironmentValues {
     }
 }
 
-@available(iOS 13.0, *)
+@available(iOS 13.0, macOS 10.15, *)
 extension Refresh {
     
     struct HeaderAnchorKey {
@@ -28,7 +28,7 @@ extension Refresh {
     }
 }
 
-@available(iOS 13.0, *)
+@available(iOS 13.0, macOS 10.15, *)
 extension Refresh.HeaderAnchorKey: PreferenceKey {
     
     typealias Value = [Item]
@@ -43,7 +43,7 @@ extension Refresh.HeaderAnchorKey: PreferenceKey {
     }
 }
 
-@available(iOS 13.0, *)
+@available(iOS 13.0, macOS 10.15, *)
 extension Refresh.HeaderUpdateKey: EnvironmentKey {
     
     struct Value {

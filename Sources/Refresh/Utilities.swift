@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-@available(iOS 13.0, *)
+@available(iOS 13.0, macOS 10.15, *)
 extension View {
     
     func clipped(_ value: Bool) -> some View {
@@ -19,7 +19,7 @@ extension View {
     }
 }
 
-@available(iOS 13.0, *)
+@available(iOS 13.0, macOS 10.15, *)
 extension EdgeInsets {
     
     static var zero: EdgeInsets {

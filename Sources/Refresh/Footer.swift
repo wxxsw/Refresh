@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-@available(iOS 13.0, *)
+@available(iOS 13.0, macOS 10.15, *)
 extension Refresh {
     
     public struct Footer<Label> where Label: View {
@@ -30,7 +30,7 @@ extension Refresh {
     }
 }
 
-@available(iOS 13.0, *)
+@available(iOS 13.0, macOS 10.15, *)
 extension Refresh.Footer {
     
     public func noMore(_ noMore: Bool) -> Self {
@@ -46,7 +46,7 @@ extension Refresh.Footer {
     }
 }
 
-@available(iOS 13.0, *)
+@available(iOS 13.0, macOS 10.15, *)
 extension Refresh.Footer: View {
     
     public var body: some View {

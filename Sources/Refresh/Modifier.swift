@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-@available(iOS 13.0, *)
+@available(iOS 13.0, macOS 10.15, *)
 extension Refresh {
     
     struct Modifier {
@@ -31,7 +31,7 @@ extension Refresh {
     }
 }
 
-@available(iOS 13.0, *)
+@available(iOS 13.0, macOS 10.15, *)
 extension Refresh.Modifier: ViewModifier {
     
     func body(content: Content) -> some View {

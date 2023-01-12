@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-@available(iOS 13.0, *)
+@available(iOS 13.0, macOS 10.15, *)
 extension EnvironmentValues {
     
     var refreshFooterUpdate: Refresh.FooterUpdateKey.Value {
@@ -16,7 +16,7 @@ extension EnvironmentValues {
     }
 }
 
-@available(iOS 13.0, *)
+@available(iOS 13.0, macOS 10.15, *)
 extension Refresh {
     
     struct FooterAnchorKey {
@@ -28,7 +28,7 @@ extension Refresh {
     }
 }
 
-@available(iOS 13.0, *)
+@available(iOS 13.0, macOS 10.15, *)
 extension Refresh.FooterAnchorKey: PreferenceKey {
     
     typealias Value = [Item]
@@ -44,7 +44,7 @@ extension Refresh.FooterAnchorKey: PreferenceKey {
     }
 }
 
-@available(iOS 13.0, *)
+@available(iOS 13.0, macOS 10.15, *)
 extension Refresh.FooterUpdateKey: EnvironmentKey {
     
     struct Value: Equatable {

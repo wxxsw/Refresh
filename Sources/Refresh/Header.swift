@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-@available(iOS 13.0, *)
+@available(iOS 13.0, macOS 10.15, *)
 extension Refresh {
     
     public struct Header<Label> where Label: View {
@@ -27,11 +27,11 @@ extension Refresh {
     }
 }
 
-@available(iOS 13.0, *)
+@available(iOS 13.0, macOS 10.15, *)
 extension Refresh.Header: View {
     
     public var body: some View {
-        if update.refresh, !refreshing, update.progress > 1 {
+        if update.refresh, !refreshing, update.progress > 1.01 {
             DispatchQueue.main.async {
                 self.refreshing = true
                 self.action()
